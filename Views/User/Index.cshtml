@@ -1,0 +1,49 @@
+﻿@model List<User>
+@{
+    Layout = "AdminLayout";
+}
+
+<div class="row">
+    <div col-12>
+        <div class =" card">
+            <div class="card-header">
+                <h3>List User</h3>
+
+            </div>
+            <div class="card-body">
+                <a href="/user/create" class="btn btn-success">Add user</a>
+                <hr />
+
+                <table class="table table-bordered">
+                    <thread>
+                        <tr>
+                            <th>Username</th>
+                            <th>Fullname</th>
+                            <th>Action</th>
+                        </tr>
+                    </thread>
+                    <tbody>
+                        @foreach (var user in Model)
+                        {
+                            <tr>
+
+                                <td>@user.Username</td>
+                                <td>@user.FullName</td>
+                                <td>
+                                    <a 
+                                        href="/User/edit/@user.Id" class="btn btn-warning">
+                                    Edit
+                                    </a>
+                                    <a href="/User/delete/@user.Id"
+                                       class="btn btn-danger">
+                                    Delete
+                                    </a>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
