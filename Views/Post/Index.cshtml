@@ -6,10 +6,10 @@
             <h1 class="fw-light">Album example</h1>
             <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don’t simply skip over it entirely.</p>
             <p>
-                <a href="/account/login" class="btn btn-primary my-2">Login</a>
                 <hr />
             </p>
         </div>
+        <a href="/post/PostCreate" class="btn btn-success">Add post</a>
     </div>
 </section>
 
@@ -33,9 +33,11 @@
                                         Read More
                                     </a>
                                 </div>
-                                
+
                                 <small class="text-muted">@post.CreatedDate</small>
                             </div>
+                            <a href="/Post/PostEdit" class="btn btn-warning">Edit</a>
+                            <a href="/User/delete" class="btn btn-danger">Delete</a>
                         </div>
                     </div>
                 </div>
