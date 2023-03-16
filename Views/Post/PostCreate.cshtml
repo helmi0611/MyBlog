@@ -1,7 +1,5 @@
 ﻿@model List<Post>;
-@{
-    Layout = "AdminLayout";
-}
+
 <div class="row">
     <div col-12>
         <div class=" card">
@@ -10,7 +8,7 @@
 
             </div>
             <div class="card-body">
-                <form method="post" action="Create">
+                <form method="post" action="PostCreate">
                     <div class="mb-3">
                         <label>Title</label>
                         <input type="text" name="Title" class="form-control" />

@@ -47,6 +47,13 @@ namespace MyBlog.Controllers
 
             return RedirectToAction("Index");
         }
+        public IActionResult Delete(int id)
+        {
+            var user = _context.Posts.FirstOrDefault(x => x.Id == id);
+            _context.Posts.Remove(user);
+            _context.SaveChanges();
 
+            return RedirectToAction("Index");
+        }
     }
 }

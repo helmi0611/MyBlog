@@ -1,5 +1,35 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+﻿@model Post;
+
+<div class="row">
+    <div col-12>
+        <div class=" card">
+            <div class="card-header">
+                <h3>Edit Post</h3>
+
+            </div>
+            <div class="card-body">
+                <form method="post" action="PostEdit">
+                    <div class="mb-3">
+                        <label>Title</label>
+                        <input type="text" name="Title" class="form-control" value="@Model.Title" />
+                    </div>
+                    <div class="mb-3">
+                        <label>Content</label>
+                        <input type="text" name="Content" class="form-control" value="@Model.Content" />
+                    </div>
+                    <div class="mb-3">
+                        <label>Create Date</label>
+                        <input type="datetime-local" name="CreatedDate" class="form-control" value="@Model.CreatedDate" />
+                    </div>
+                    <div class="mb-3">
+                        <label>Update Date</label>
+                        <input type="datetime-local" name="UpdatedDate" class="form-control" value="@Model.UpdatedDate" />
+                    </div>
+                    <div class="mb-3">
+                        <button type="submit" class="btn btn-success">Save</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
