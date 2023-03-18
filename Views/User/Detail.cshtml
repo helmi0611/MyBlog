@@ -1,0 +1,36 @@
+﻿@model User
+@{
+    Layout = "AdminLayout";
+}
+
+<div class="row">
+    <div col-12>
+        <div class=" card">
+            <div class="card-header">
+                <h3>Add User</h3>
+
+            </div>
+            <div class="card-body">
+                <table class="table table-bordered">
+                    <thread>
+                        <tr>
+                            <th>Username</th>
+                            <th>Fullname</th>
+                            <th>Photo</th>
+                        </tr>
+                    </thread>
+                    <tbody>
+                        <tr>
+                            <td>@Model.Username</td>
+                            <td>@Model.FullName</td>
+                            <td>
+                                <img width="100" height="100" src="~/upload/@Model.Photo"/>
+                                <a href="/user/download/@Model.Id" download class="btn btn-primary">Download Photo</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

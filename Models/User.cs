@@ -8,8 +8,11 @@ namespace MyBlog.Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
-        public string? Username { get; set; }
-        public string? Password { get; set; }
-        public string? FullName { get; set; }
+
+        [StringLength(12, MinimumLength =3, ErrorMessage="Username harus lebih dari 3 karakter atau kurang dari 12 karakter")]
+        public string Username { get; set; }
+        public string Password { get; set; }
+        public string FullName { get; set; }
+        public string? Photo { get; set; }
     }
 }
