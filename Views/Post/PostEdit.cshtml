@@ -8,7 +8,8 @@
 
             </div>
             <div class="card-body">
-                <form method="post" action="PostEdit">
+                <form method="post" asp-action="PostEdit" asp-controller="Post">
+                    <input type="hidden" name="Id" value="@Model.Id" />
                     <div class="mb-3">
                         <label>Title</label>
                         <input type="text" name="Title" class="form-control" value="@Model.Title" />
